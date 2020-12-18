@@ -9,7 +9,7 @@ if (BOOST_MATH_INCLUDE_DIR)
     $<BUILD_INTERFACE:${BOOST_MATH_INCLUDE_DIR}>)
 else()
   # Otherwise assuming a global or vcpkg-managed Boost Math installation
-  find_package(Boost 1.74 REQUIRED)
+  find_package(Boost REQUIRED)
   target_link_libraries(boost-math-issue-458 PRIVATE Boost::boost)
 endif()
 

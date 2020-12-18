@@ -1,0 +1,46 @@
+name: Build
+
+on:
+  workflow_dispatch:
+    inputs:
+  pull_request:
+    branches:
+      - '*'
+  push:
+    branches:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Install Boost
+      run: sudo apt-get update && sudo apt-get install -yq libboost-math-dev
+
+    - name: Clang - release
+      run:  ./build-x64-linux.sh
+      shell: bash
+      env:
+        BOOST_MATH_INCLUDE_DIR: ""
+
+    - name: Clang - debug
+      run: ./build-x64-linux.sh debug
+      shell: bash
+      env:
+        BOOST_MATH_INCLUDE_DIR: ""
+      
+    - name: GCC - release
+      run: ./build-x64-linux.sh gcc
+      shell: bash
+      env:
+        BOOST_MATH_INCLUDE_DIR: ""
+
+    - name: GCC - debug
+      run: ./build-x64-linux.sh debug gcc
+      shell: bash
+      env:
+        BOOST_MATH_INCLUDE_DIR: ""
