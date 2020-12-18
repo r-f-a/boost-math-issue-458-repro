@@ -2,9 +2,6 @@
 #
 # Build for x64 Linux.
 #
-# Requirements:
-#   - git, cmake, unzip and a c++ compiler such as g++ or clang.
-#
 # Usage:
 #   - BOOST_MATH_INCLUDE_DIR=path_to_boost ./build-x64-linux.sh: Build RelWithDebInfo with clang
 #   - BOOST_MATH_INCLUDE_DIR=path_to_boost ./build-x64-linux.sh gcc: Build RelWithDebInfo with gcc
