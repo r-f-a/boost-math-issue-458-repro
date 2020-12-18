@@ -2,6 +2,11 @@
 
 add_executable (boost-math-issue-458 "boost-math-issue-458.cpp")
 
+if (CMAKE_CXX_COMPILER_ID  STREQUAL Clang)
+  message(STATUS "Using Clang compile option: -ffp-exception-behavior=maytrap")
+  target_compile_options(boost-math-issue-458 PRIVATE -ffp-exception-behavior=maytrap)
+endif()
+
 if (BOOST_MATH_INCLUDE_DIR)
   # Building with a custom Boost Math include path
   message(STATUS "Using BOOST_MATH_INCLUDE_DIR: ${BOOST_MATH_INCLUDE_DIR}")
