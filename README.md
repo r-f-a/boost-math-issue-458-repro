@@ -7,6 +7,7 @@
   - `BOOST_MATH_INCLUDE_DIR=path_to_boost ./build-x64-linux.sh gcc`: Build RelWithDebInfo with gcc
   - `BOOST_MATH_INCLUDE_DIR=path_to_boost ./build-x64-linux.sh debug`: Build Debug with clang
   - `BOOST_MATH_INCLUDE_DIR=path_to_boost ./build-x64-linux.sh debug gcc`: Build Debug with gcc
+  - `BOOST_MATH_INCLUDE_DIR= ./build-x64-linux.sh`: Build RelWithDebInfo with clang using _system-wide_ Boost
 
 E.g.: `BOOST_MATH_INCLUDE_DIR=~/src/boost_1_74_0 ./build-x64-linux.sh`
 

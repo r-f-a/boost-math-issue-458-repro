@@ -2,7 +2,7 @@
 
 add_executable (boost-math-issue-458 "boost-math-issue-458.cpp")
 
-if (DEFINED BOOST_MATH_INCLUDE_DIR)
+if (BOOST_MATH_INCLUDE_DIR)
   # Building with a custom Boost Math include path
   message(STATUS "Using BOOST_MATH_INCLUDE_DIR: ${BOOST_MATH_INCLUDE_DIR}")
   target_include_directories(boost-math-issue-458 SYSTEM PRIVATE
