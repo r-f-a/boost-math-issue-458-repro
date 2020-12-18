@@ -20,10 +20,10 @@ then
   build_type="Debug"
 fi
 
-clang_addon="-DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++"
+compiler_addon="-DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++"
 if [ "$1" = "gcc" -o "$2" = "gcc" ]
 then
-  clang_addon=""
+  compiler_addon="-DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++"
 fi
 
 triplet="x64-linux"
@@ -35,7 +35,7 @@ cd ${rootDir}
 rm -f "out/build/${triplet}/CMakeCache.txt"
 cmake -S . -B "out/build/${triplet}" -DCMAKE_BUILD_TYPE=${build_type} -DCMAKE_VERBOSE_MAKEFILE=ON \
   -DBOOST_MATH_INCLUDE_DIR:FILEPATH="${BOOST_MATH_INCLUDE_DIR}" \
-  ${clang_addon}
+  ${compiler_addon}
   
 
 # Build

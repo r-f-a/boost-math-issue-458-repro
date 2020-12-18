@@ -3,6 +3,7 @@
 -- Using CMAKE_C_COMPILER: clang
 -- Using CMAKE_CXX_COMPILER: clang++
 -- Using CMAKE_BUILD_TYPE: RelWithDebInfo
+-- The CXX compiler identification is Clang 10.0.0
 -- Using BOOST_MATH_INCLUDE_DIR: /mnt/c/src/.external/boost_1_74_0
 
 1: Before: 0
@@ -17,6 +18,7 @@
 -- Using CMAKE_C_COMPILER: clang
 -- Using CMAKE_CXX_COMPILER: clang++
 -- Using CMAKE_BUILD_TYPE: Debug
+-- The CXX compiler identification is Clang 10.0.0
 -- Using BOOST_MATH_INCLUDE_DIR: /mnt/c/src/.external/boost_1_74_0
 
 1: Before: 0
@@ -28,12 +30,10 @@
 
 # GCC - Release
 
--- Using CMAKE_C_COMPILER:
--- Using CMAKE_CXX_COMPILER:
+-- Using CMAKE_C_COMPILER: gcc
+-- Using CMAKE_CXX_COMPILER: g++
 -- Using CMAKE_BUILD_TYPE: RelWithDebInfo
 -- The CXX compiler identification is GNU 9.3.0
--- Check for working CXX compiler: /usr/bin/c++
--- Check for working CXX compiler: /usr/bin/c++ -- works
 -- Using BOOST_MATH_INCLUDE_DIR: /mnt/c/src/.external/boost_1_74_0
 
 1: Before: 0
@@ -45,12 +45,10 @@
 
 # GCC - Debug
 
--- Using CMAKE_C_COMPILER:
--- Using CMAKE_CXX_COMPILER:
+-- Using CMAKE_C_COMPILER: gcc
+-- Using CMAKE_CXX_COMPILER: g++
 -- Using CMAKE_BUILD_TYPE: Debug
 -- The CXX compiler identification is GNU 9.3.0
--- Check for working CXX compiler: /usr/bin/c++
--- Check for working CXX compiler: /usr/bin/c++ -- works
 -- Using BOOST_MATH_INCLUDE_DIR: /mnt/c/src/.external/boost_1_74_0
 
 1: Before: 0
